@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../sass/messenger-style.css">
+
+    <script type="text/javascript">
+        function showModalWin() {
+
+            var darkLayer = document.createElement('div');
+            darkLayer.id = 'shadow';
+            document.body.appendChild(darkLayer);
+
+            var modalWin = document.getElementById('messenger-modal');
+            modalWin.style.display = 'block';
+
+            darkLayer.onclick = function () {
+                darkLayer.parentNode.removeChild(darkLayer);
+                modalWin.style.display = 'none';
+                return false;
+            };
+        }
+    </script>
+</head>
+<body>
+
+<button onclick="showModalWin()">click to modal</button>
+
+<article class="modal-messenger" id="messenger-modal">
+    <aside class="messenger-navbar">
+        <section class="navbar-header">
+            <i class="material-icons navbar-header__ico">menu</i>
+            <i class="material-icons navbar-header__ico--close">close</i>
+            <h3 class="navbar-header__title">messenger</h3>
+            <ul class="messenger-pop-up messenger-pop-up__nav">
+                <li class="messenger-pop-up__item">
+                    <a href="" class="messenger-pop-up__url messenger-pop-up__url--nav-size"><i class="material-icons messenger-pop-up__ico">group_add</i>New Stream</a>
+                </li>
+                <li class="messenger-pop-up__item">
+                    <a href="" class="messenger-pop-up__url messenger-pop-up__url--nav-size"><i class="material-icons messenger-pop-up__ico">supervisor_account</i>Members</a>
+                </li>
+            </ul>
+        </section>
+        <section class="navbar-search">
+            <input type="text" class="navbar-search__input" placeholder="Search">
+            <i class="material-icons navbar-search__ico">search</i>
+        </section>
+        <div class="navbar-user-list__title">
+            <h5 class="navbar-user-list__caption">
+                streams
+            </h5>
+            <div class="navbar-user-list__counter">
+                <h6 class="navbar-user-list__message-counter">0</h6>
+                <i class="material-icons navbar-user-list__ico">email</i>
+            </div>
+        </div>
+        <div class="navbar-user-list__title">
+            <h5 class="navbar-user-list__caption">
+                members
+            </h5>
+            <div class="navbar-user-list__counter">
+                <h6 class="navbar-user-list__message-counter">0</h6>
+                <i class="material-icons navbar-user-list__ico">email</i>
+            </div>
+        </div>
+    </aside>
+    <main class="messenger-chat messenger-chat--empty">
+        <h1 class="messenger-chat__title--empty">No Chats</h1>
+    </main>
+
+
+
+    <!--modals-->
+
+    <div class="shadow inside-shadow"></div>
+
+    <article class="modal modal--small modal-new-member">
+        <section class="modal__header modal__header--small">
+            <h6 class="modal__title">Members</h6>
+            <div class="modal__ico-area">
+                <i class="material-icons modal__header-ico">edit</i>
+                <i class="material-icons modal__header-ico">close</i>
+            </div>
+        </section>
+        <section class="modal__search-form">
+            <input type="text" class="modal__input" placeholder="Search">
+            <i class="material-icons modal__search-form-ico">search</i>
+        </section>
+
+        <article class="modal-members-list">
+
+
+        </article>
+        <section class="modal__footer modal__footer--small">
+            <button class="modal__btn modal__btn--save">new member</button>
+        </section>
+    </article>
+
+</article>
+</body>
+</html>

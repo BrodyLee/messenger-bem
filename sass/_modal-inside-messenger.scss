@@ -1,0 +1,150 @@
+.modal {
+  max-width: 347px;
+  width: 100%;
+  height: 528px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 22.6px 1.4px rgba(166, 176, 182, 0.41);
+  position: absolute;
+  z-index: 5;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &--small {
+    max-width: 319px;
+    height: 434px;
+  }
+&__header{
+  padding: 33px;
+  padding-bottom: 0;
+  @include flex-between;
+  &--small {
+    padding:25px;
+  }
+}
+&__title {
+  color: #2a324f;
+  @include HelveticaM;
+  font-size: 16px;
+  @include no-marg;
+  }
+&__header-ico {
+  @include transition;
+  font-size: 18px;
+  margin-left: 12px;
+  color: #bac3d3;
+  cursor: pointer;
+  &:hover {
+    color: $main-color;
+  }
+}
+  &__footer {
+    display: flex;
+    justify-content: center;
+    height: 69px;
+    align-items: center;
+    &--small {
+      height: 54px;
+    }
+    &--align-right {
+      justify-content: flex-end;
+    }
+    &--members {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+  &__btn {
+    text-transform: uppercase;
+    @include HelveticaM;
+    @include lg-letter-space;
+    padding: 0 10px;
+    background: transparent;
+    border: 0;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    @include transition;
+
+    &:focus {
+      outline: 0;
+    }
+    &--cancel {
+      color: #a6b0b6;
+      margin-right: 10px;
+      &:hover {
+        background-color: lighten(#a6b0b6, 25%);
+      }
+    }
+    &--save {
+      color: $main-color;
+      &:hover {
+        background-color: lighten($main-color, 40%);
+      }
+    }
+  }
+  &__search-form {
+    margin-bottom: 30px;
+    padding: 0 24px;
+    position: relative;
+    width: 100%;
+    @include box;
+    &--members {
+      margin-bottom: 20px;
+    }
+  }
+ &__input {
+   border: 0;
+   border-bottom: 1px solid #f1f3f7;
+   padding: 5px 10px 7px 25px;
+   width: 100%;
+   @include HelveticaR;
+   @include lg-letter-space;
+   @include box;
+   @include transition;
+   &:focus {
+     outline: 0;
+     border-bottom: 1px solid $main-color;
+   }
+   &:focus ~ .modal__search-form-ico {
+     color: $main-color;
+   }
+   &--no-padd {
+     padding-left: 0;
+   }
+ }
+  &__search-form-ico {
+    color: #dbe0e9;
+    font-size:18px;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+  }
+  &__user-url {
+    text-decoration: none;
+    color: $main-color;
+  }
+  &__input-field {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  &__label {
+    position: absolute;
+    top: 5px;
+    @include opacity(0.8);
+    color: #afb4bd;
+    @include HelveticaR;
+    font-size: 14px;
+    @include lg-letter-space;
+    @include transition;
+    &--active {
+      color: $main-color;
+      top: -15px;
+      font-size: 12px;
+    }
+  }
+}
+

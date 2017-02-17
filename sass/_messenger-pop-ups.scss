@@ -1,0 +1,49 @@
+.messenger-pop-up {
+  @include hide;
+  background-color: white;
+  position: absolute;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 2;
+  padding: 0;
+  top:15px;
+  right: -10px;
+  box-shadow: 0 2px 5.6px 0.4px rgba(120, 144, 156, 0.41);
+  list-style: none;
+  &__url {
+    color: #2a324f;
+    @include HelveticaM;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    padding: 15px;
+    &:hover {
+      background-color:rgba(0,0,0,0.1);
+    }
+    &--big {
+      padding: 15px 20px;
+    }
+    &--nav-size {
+      padding: 12px;
+    }
+  }
+  &__media-files {
+    right: 10px;
+
+  }
+  &__nav {
+    left: 33px;
+    width: 120px;
+    height: 89px;
+    top: 35px;
+  }
+  &__ico {
+    font-size: 18px;
+    color: $main-color;
+    margin-right: 6px;
+    position: relative;
+    top: 4px;
+  }
+}
+

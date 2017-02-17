@@ -1,0 +1,28 @@
+.chat-user-yourself {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 25px;
+  margin-top: 20px;
+}
+
+.chat-user__name--self {
+  text-align: right;
+  @include no-marg;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.chat-user__user-message--self {
+  background: #dde2ed;
+  box-shadow: none;
+  flex-direction: row-reverse;
+  &:after {
+    display: none;
+  }
+}
+
+.chat-user__img-col--self {
+  margin-left: 0;
+  margin-right: 10px;
+}

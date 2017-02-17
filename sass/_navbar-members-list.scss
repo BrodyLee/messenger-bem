@@ -1,0 +1,38 @@
+.navbar-members-list {
+  @include flex-between;
+  margin: 15px 0;
+  padding: 10px 25px;
+  @include box;
+  align-items: center;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+  &__title {
+    color: $main-color;
+    @include HelveticaB;
+    @include no-marg;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include lg-letter-space;
+  }
+  &__counter {
+    position: relative;
+  }
+  &__members-counter {
+    color: #c1c7d3;
+    @include HelveticaB;
+    font-size: 12px;
+  }
+  &__notify {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: $main-color;
+    display: block;
+    border-radius: 50%;
+    right: 0;
+    top: 3px;
+  }
+}

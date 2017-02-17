@@ -1,0 +1,67 @@
+.messenger-user-info {
+  display: none;
+  width: 137px;
+  height: 237px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 5.6px 0.4px rgba(120, 144, 156, 0.41);
+  padding: 15px 15px 0 15px;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 20px;
+  &--in-modal {
+    left: 35px;
+  }
+
+  &__outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__logo {
+    background-image: url("../images/inside-chat-user-logo.png");
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #dde2ed;
+  }
+  &__name {
+    margin: 0;
+    margin-top: 11px;
+    color: #2a324f;
+    @include HelveticaB;
+    font-size: 12px;
+    @include  lg-letter-space;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__list-of-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  &__item-list {
+    @include HelveticaM;
+    font-size:11px;
+    color: #2a324f;
+    display: flex;
+  }
+  &__ico {
+    color: $main-color;
+    font-size: 18px;
+    margin-top: -4px;
+    margin-bottom: 20px;
+    margin-right: 12px;
+  }
+}

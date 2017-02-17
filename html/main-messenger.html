@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../sass/messenger-style.css">
+
+</head>
+<body>
+
+<button onclick="showModalWin()">click to modal</button>
+
+<article class="modal-messenger" id="messenger-modal">
+<aside class="messenger-navbar" id="messenger-navbar">
+    <section class="navbar-header">
+        <h3 class="navbar-header__title">messenger</h3>
+        <ul class="messenger-pop-up messenger-pop-up__nav">
+            <li class="messenger-pop-up__item">
+                <a href="" class="messenger-pop-up__url messenger-pop-up__url--nav-size"><i class="material-icons messenger-pop-up__ico">group_add</i>New Stream</a>
+            </li>
+            <li class="messenger-pop-up__item">
+                <a href="" class="messenger-pop-up__url messenger-pop-up__url--nav-size"><i class="material-icons messenger-pop-up__ico">supervisor_account</i>Members</a>
+            </li>
+        </ul>
+    </section>
+    <section class="navbar-search">
+        <input type="text" class="navbar-search__input" placeholder="Search">
+        <i class="material-icons navbar-search__ico">search</i>
+    </section>
+    <section class="navbar-members-list" onclick="showModalWinMembers()">
+        <h5 class="navbar-members-list__title">members</h5>
+        <div class="navbar-members-list__counter">
+            <span class="navbar-members-list__members-counter">(230)</span>
+            <i class="navbar-members-list__notify"></i>
+        </div>
+    </section>
+    <div class="navbar-user-list__title">
+        <div class="navbar-user-list__outer">
+        <h5 class="navbar-user-list__caption">
+            channels
+        </h5>
+        <i class="material-icons navbar-user-list__new-stream">group_add</i>
+        </div>
+        <div class="navbar-user-list__counter">
+            <h6 class="navbar-user-list__message-counter">123</h6>
+            <i class="material-icons navbar-user-list__ico">email</i>
+        </div>
+    </div>
+    <section class="navbar-user-list">
+        <div class="user-chat-col">
+            <div class="user-chat-col__outer">
+            <div class="user-chat-col__photo">
+                <img src="../images/user-logo.jpg" class="user-chat-col__img" alt="">
+            </div>
+            <div class="user-chat-col__description">
+                <h5 class="user-chat-col__title">Stream Sharwoooooooooood</h5>
+                <p class="user-chat-col__message--preview">
+                    Silver New Sweet Good Luck BIg Cool Many Looooooong
+                </p>
+            </div>
+            </div>
+            <div class="user-chat-col__date-of-message">
+                <h6 class="user-chat-col__date">
+                    Dec 12
+                </h6>
+                <div class="user-chat-col__counter">
+                    <h6 class="user-chat-col__message-counter--active">123</h6>
+                    <i class="material-icons user-chat-col__ico">email
+                    <span class="user-chat-col__ico--active"></span>
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="user-chat-col user-chat-col--active">
+        <div class="user-chat-col__outer">
+            <div class="user-chat-col__photo">
+            </div>
+            <div class="user-chat-col__description">
+                <h5 class="user-chat-col__title">Stream Sharwoooooooooood</h5>
+                <p class="user-chat-col__message--preview">
+                    Silver New Sweet Good Luck BIg Cool Many Looooooong
+                </p>
+            </div>
+        </div>
+        <div class="user-chat-col__date-of-message">
+            <h6 class="user-chat-col__date">
+                Dec 12
+            </h6>
+            <div class="user-chat-col__counter">
+                <h6 class="user-chat-col__message-counter">123</h6>
+                <i class="material-icons user-chat-col__ico">email</i>
+            </div>
+        </div>
+    </div>
+        <div class="user-chat-col">
+            <div class="user-chat-col__outer">
+                <div class="user-chat-col__photo">
+                </div>
+                <div class="user-chat-col__description">
+                    <h5 class="user-chat-col__title">Stream Sharwoooooooooood</h5>
+                    <p class="user-chat-col__message--preview">
+                        Silver New Sweet Good Luck BIg Cool Many Looooooong
+                    </p>
+                </div>
+            </div>
+            <div class="user-chat-col__date-of-message">
+                <h6 class="user-chat-col__date">
+                    Dec 12
+                </h6>
+                <div class="user-chat-col__counter">
+                    <h6 class="user-chat-col__message-counter">123</h6>
+                    <i class="material-icons user-chat-col__ico">email</i>
+                </div>
+            </div>
+        </div>
+        <div class="user-chat-col">
+            <div class="user-chat-col__outer">
+                <div class="user-chat-col__photo">
+                </div>
+                <div class="user-chat-col__description">
+                    <h5 class="user-chat-col__title">Stream Sharwoooooooooood</h5>
+                    <p class="user-chat-col__message--preview">
+                        Silver New Sweet Good Luck BIg Cool Many Looooooong
+                    </p>
+                </div>
+            </div>
+            <div class="user-chat-col__date-of-message">
+                <h6 class="user-chat-col__date">
+                    Dec 12
+                </h6>
+                <div class="user-chat-col__counter">
+                    <h6 class="user-chat-col__message-counter">123</h6>
+                    <i class="material-icons user-chat-col__ico">email</i>
+                </div>
+            </div>
+        </div>
+    </section>
+</aside>
+    <main class="messenger-chat" id="messenger-chat">
+            <header class="messenger-header">
+
+                <div class="messenger-header__chat-title">
+                    <i class="material-icons navbar-header__ico" onclick="showSideBar()">menu</i>
+                    <a href="#" class="messenger-header__caption-chat">Lorem Impsum mLorem Impsum Lorem Impsum Lorem ImpsumLorem Impsum </a>
+                    <h6 class="messenger-header__counter-members">(30 members)</h6>
+                </div>
+                <div class="messenger-header__icon-area">
+                    <i class="material-icons messenger-header__attach-file-ico">attach_file</i>
+                    <i class="material-icons messenger-header__settings-ico">settings</i>
+                    <ul class="messenger-pop-up messenger-pop-up__settings--member">
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url">Edit Stream</a></li>
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url">Add Members</a></li>
+                    </ul>
+                    <ul class="messenger-pop-up pop messenger-pop-up__settings--admin">
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url">Stream Info</a></li>
+                    </ul>
+                    <ul class="messenger-pop-up pop messenger-pop-up__media-files">
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url messenger-pop-up__url--big ">Photos</a></li>
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url messenger-pop-up__url--big ">Videos</a></li>
+                        <li class="messenger-pop-up__item"><a href="#" class="messenger-pop-up__url messenger-pop-up__url--big ">Files</a></li>
+                    </ul>
+                </div>
+            </header>
+        <article class="chat-messages">
+            <div class="messenger-day">
+                Today
+            </div>
+
+
+            <section class="chat-user">
+                <div class="chat-user__outer">
+                    <div class="user-chat-col__photo user-chat-col__photo--inside-chat">
+                        <img src="../images/user-logo.jpg" class="user-chat-col__img" alt="">
+                    </div>
+                    <div class="chat-user__name">
+                        Pink Panter
+                    </div>
+                </div>
+                <div class="chat-user__user-message">
+                    lorem     lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lore
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <section class="chat-user">
+                <div class="chat-user__outer">
+                    <div class="user-chat-col__photo user-chat-col__photo--inside-chat">
+                    </div>
+                    <div class="chat-user__name">
+                        Pink Panter
+                    </div>
+                </div>
+                <div class="chat-user__user-message">
+                    lorem     lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lore
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <section class="chat-user chat-user--group-message">
+                <div class="chat-user__user-message chat-user__user-message--group">
+                    lorem     lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lorem    lore
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+
+
+            <section class="chat-user">
+                <div class="chat-user__outer">
+                    <div class="user-chat-col__photo user-chat-col__photo--inside-chat">
+                        <img src="../images/user-logo.jpg" class="user-chat-col__img" alt="">
+
+                        <section class="messenger-user-info">
+                            <div class="messenger-user-info__outer">
+                            <div class="messenger-user-info__logo"><img src="../images/user-logo.jpg" class="user-chat-col__img"  alt=""></div>
+                            <h5 class="messenger-user-info__name">Rose Pantera</h5>
+                            </div>
+                            <ul class="messenger-user-info__list-of-info">
+                                <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">work</i>Apple Corporation</li>
+                                <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">location_on</i>USA, New York</li>
+                                <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">email</i>rose@gmail.com</li>
+                                <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">phone</i>+105050850</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="chat-user__name">
+                        Pink Pantersadasdasd
+                    </div>
+                </div>
+                <div class="chat-user__user-message">
+                    lol lolol                     lol lolol                     lol lolol
+                    <div class="chat-user__img-col">
+                    <img src="../images/img-message.jpg" class="chat-user__img"  alt="">
+                        <div class="chat-user__background-shadow">
+                            <i class="material-icons chat-user__view-ico">remove_red_eye</i>
+                            <i class="material-icons chat-user__download-ico">file_download</i>
+                        </div>
+                    </div>
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <section class="chat-user">
+                <div class="chat-user__outer">
+                    <div class="user-chat-col__photo user-chat-col__photo--inside-chat">
+                        <img src="../images/user-logo.jpg" class="user-chat-col__img" alt="">
+                    </div>
+                    <h5 class="chat-user__name">
+                        Pink Pantersadasdasd
+                    </h5>
+                </div>
+                <div class="chat-user__user-message">
+                    lol lolol                     lol lolol                     lol lolol
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <section class="chat-user-yourself">
+                <h5 class="chat-user__name chat-user__name--self">You</h5>
+                <div class="chat-user__user-message chat-user__user-message--self">
+                    lol lolol  lol lolol lol lolol
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <section class="chat-user-yourself">
+                <div class="chat-user__user-message chat-user__user-message--self">
+                    lol lolol  lol lolol lol lolol
+                    <div class="chat-user__img-col chat-user__img-col--self">
+                        <img src="../images/img-message.jpg" class="chat-user__img"  alt="">
+                        <div class="chat-user__background-shadow">
+                            <i class="material-icons chat-user__view-ico">remove_red_eye</i>
+                            <i class="material-icons chat-user__download-ico">file_download</i>
+                        </div>
+                    </div>
+                    <div class="chat-user__message-time">4:20 PM</div>
+                </div>
+            </section>
+            <div class="chat-user__type-status">
+                Pink Pantera type...
+            </div>
+        </article>
+        <section class="messenger-textarea">
+            <textarea class="messenger-textarea__input-field" placeholder="Type a message here"></textarea>
+            <div class="messenger-textarea__outer">
+                <div class="messenger-textarea__attach-file">
+                    <i class="material-icons messenger-textarea__ico">attachment</i>
+                    <i class="material-icons messenger-textarea__ico">photo_camera</i>
+                    <div class="messenger-textareea__load-img">
+                        <h5 class="messenger-textarea__img-caption">images.gif</h5>
+                    </div>
+                </div>
+                <button type="submit" class="messenger-textarea__btn"><i class="material-icons messenger-textarea__button-ico">send</i></button>
+            </div>
+        </section>
+    </main>
+
+
+    <!--modals-->
+    <article class="modal modal-members" id="modal-members">
+        <section class="modal__header modal__header--small">
+            <h6 class="modal__title">Members</h6>
+            <div class="modal__ico-area">
+                <i class="material-icons modal__header-ico">close</i>
+            </div>
+        </section>
+        <section class="modal__search-form modal__search-form--members">
+            <input type="text" class="modal__input" placeholder="Search">
+            <i class="material-icons modal__search-form-ico">search</i>
+        </section>
+
+        <h6 class="modal-members__caption-group">
+            Unconfirmed (233)
+        </h6>
+        <article class="modal-members-list modal-members-list--small">
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title members-info__title--no-text">Shaun Gardner</h5>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">add</i>
+                    <i class="material-icons members-info__ico">close</i>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title members-info__title--no-text">Shaun Gardner</h5>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">add</i>
+                    <i class="material-icons members-info__ico">close</i>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title members-info__title--no-text">Shaun Gardnasdaddasdasdassadasder</h5>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">add</i>
+                    <i class="material-icons members-info__ico">close</i>
+                </div>
+            </section>
+        </article>
+
+        <h6 class="modal-members__caption-group">
+            All (233)
+        </h6>
+        <article class="modal-members-list modal-members-list--members modal-members-list--few-unconfirmed">
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+                <section class="messenger-user-info messenger-user-info--in-modal">
+                    <div class="messenger-user-info__outer">
+                        <div class="messenger-user-info__logo"><img src="../images/user-logo.jpg" class="user-chat-col__img"  alt=""></div>
+                        <h5 class="messenger-user-info__name">Rose Pantera</h5>
+                    </div>
+                    <ul class="messenger-user-info__list-of-info">
+                        <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">work</i>Apple Corporation</li>
+                        <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">location_on</i>USA, New York</li>
+                        <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">email</i>rose@gmail.com</li>
+                        <li class="messenger-user-info__item-list"><i class="material-icons messenger-user-info__ico">phone</i>+105050850</li>
+                    </ul>
+                </section>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+            </section>
+
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+            </section>
+
+
+        </article>
+        <section class="modal__footer modal__footer--small modal__footer--members">
+            <button class="modal__btn modal__btn--save">new member</button>
+        </section>
+    </article>
+
+    <article class="modal modal-edit-stream">
+            <section class="modal__header">
+                <h6 class="modal__title">Edit Stream</h6>
+                <div class="modal__ico-area">
+                    <i class="material-icons modal__header-ico">close</i>
+                </div>
+            </section>
+            <section class="modal-stream">
+                <div class="modal-stream__logo">
+                </div>
+                    <input type="text" class="modal-stream__input" value="Soo very very very very very very logn stream name">
+            </section>
+            <section class="modal-stream__members">
+                <div class="modal-stream__members-counter">
+                    <i class="material-icons modal-stream__quantity-ico">supervisor_account</i>
+                    <span class="modal-stream__quantity">7 Members</span>
+                </div>
+                <i class="material-icons modal-stream__add-members">person_add</i>
+            </section>
+            <article class="modal-members-list">
+                <section class="members-info">
+                    <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                    </div>
+                    <div class="members-info__icons-area">
+                        <i class="material-icons members-info__ico">input</i>
+                        <div class="members-info__tooltip">
+                            Leave Stream
+                        </div>
+                    </div>
+
+                </section>
+                <section class="members-info">
+                    <div class="members-info__outer">
+                        <div class="members-info__logo">
+                            <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                            <div class="members-info__status members-info__status--online"></div>
+                        </div>
+                        <div class="members-info__description">
+                            <h5 class="members-info__title">Shaun Gardner</h5>
+                            <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                        </div>
+                    </div>
+                    <div class="members-info__icons-area">
+                        <i class="material-icons members-info__ico">delete</i>
+                    </div>
+
+                </section>
+                <section class="members-info">
+                    <div class="members-info__outer">
+                        <div class="members-info__logo">
+                            <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                            <div class="members-info__status members-info__status--online"></div>
+                        </div>
+                        <div class="members-info__description">
+                            <h5 class="members-info__title">Shaun Gardner</h5>
+                            <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                        </div>
+                    </div>
+                    <div class="members-info__icons-area">
+                        <i class="material-icons members-info__ico">delete</i>
+                    </div>
+
+                </section>
+                <section class="members-info">
+                    <div class="members-info__outer">
+                        <div class="members-info__logo">
+                            <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                            <div class="members-info__status members-info__status--ofc"></div>
+                        </div>
+                        <div class="members-info__description">
+                            <h5 class="members-info__title">Shaun Gardner</h5>
+                            <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                        </div>
+                    </div>
+                    <div class="members-info__icons-area">
+                        <i class="material-icons members-info__ico">delete</i>
+                    </div>
+
+                </section>
+                <section class="members-info">
+                    <div class="members-info__outer">
+                        <div class="members-info__logo">
+                            <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                            <div class="members-info__status members-info__status--offline"></div>
+                        </div>
+                        <div class="members-info__description">
+                            <h5 class="members-info__title">Shaun Gardner</h5>
+                            <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                        </div>
+                    </div>
+                    <div class="members-info__icons-area">
+                        <i class="material-icons members-info__ico">delete</i>
+                    </div>
+
+                </section>
+            </article>
+            <section class="modal__footer">
+                <button class="modal__btn modal__btn--cancel">cancel</button>
+                <button class="modal__btn modal__btn--save">save</button>
+            </section>
+        </article>
+    <article class="modal modal-streams-info">
+        <section class="modal__header">
+            <h6 class="modal__title">Streams Info</h6>
+            <div class="modal__ico-area">
+                <i class="material-icons modal__header-ico">close</i>
+            </div>
+        </section>
+        <section class="modal-stream">
+            <div class="modal-stream__logo">
+                <img src="../images/stream-logo.jpg" class="modal-stream__img" alt="">
+            </div>
+            <input type="text" class="modal-stream__input" value="Soo very very very very very very logn stream name">
+        </section>
+        <section class="modal-stream__members">
+            <div class="modal-stream__members-counter">
+                <i class="material-icons modal-stream__quantity-ico">supervisor_account</i>
+                <span class="modal-stream__quantity">7 Members</span>
+            </div>
+            <i class="material-icons modal-stream__add-members">person_add</i>
+        </section>
+        <article class="modal-members-list">
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">input</i>
+                    <div class="members-info__tooltip">
+                        Leave Stream
+                    </div>
+                </div>
+
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--ofc"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--offline"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+                <div class="members-info__icons-area">
+                    <i class="material-icons members-info__ico">delete</i>
+                </div>
+
+            </section>
+        </article>
+        <section class="modal__footer">
+            <button class="modal__btn modal__btn--cancel">cancel</button>
+            <button class="modal__btn modal__btn--save">save</button>
+        </section>
+    </article>
+    <article class="modal modal--small modal-new-member">
+        <section class="modal__header modal__header--small">
+            <h6 class="modal__title">Members</h6>
+            <div class="modal__ico-area">
+                <i class="material-icons modal__header-ico">edit</i>
+                <i class="material-icons modal__header-ico">close</i>
+            </div>
+        </section>
+        <section class="modal__search-form">
+            <input type="text" class="modal__input" placeholder="Search">
+            <i class="material-icons modal__search-form-ico">search</i>
+        </section>
+
+        <article class="modal-members-list">
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+        <section class="modal__footer modal__footer--small">
+            <button class="modal__btn modal__btn--save">new member</button>
+        </section>
+    </article>
+    <article class="modal modal--small modal-delete-member">
+        <section class="modal__header modal__header--small">
+            <h6 class="modal__title">Members</h6>
+            <div class="modal__ico-area">
+                <i class="material-icons modal__header-ico">edit</i>
+                <i class="material-icons modal__header-ico">close</i>
+            </div>
+        </section>
+        <section class="modal__search-form">
+            <input type="text" class="modal__input" placeholder="Search">
+            <i class="material-icons modal__search-form-ico">search</i>
+        </section>
+
+        <article class="modal-members-list">
+            <section class="members-info members-info--delete">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--offline"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--ofc"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+            <section class="members-info">
+                <div class="members-info__outer">
+                    <div class="members-info__logo">
+                        <img src="../images/user-logo.jpg" class="members-info__img" alt="">
+                        <div class="members-info__status members-info__status--online"></div>
+                    </div>
+                    <div class="members-info__description">
+                        <h5 class="members-info__title">Shaun Gardner</h5>
+                        <p class="members-info__overview">Silver Nes Sweet Good Luck Have Fun</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+        <section class="modal__footer modal__footer--small">
+            <button class="modal__btn modal__btn--cancel">delete (1)</button>
+        </section>
+    </article>
+    <article class="modal modal-confirmation">
+        <h5 class="modal__title">Leave Stream</h5>
+        <p class="modal-confirmation__text">
+            Are you sure, you want to delete all message history and leave the stream?
+        </p>
+        <section class="modal__footer modal__footer--small modal__footer--align-right">
+            <button class="modal__btn modal__btn--cancel">cancel</button>
+            <button class="modal__btn modal__btn--save">leave</button>
+        </section>
+    </article>
+    <article class="modal modal-confirmation ">
+            <h5 class="modal__title">Are You Sure?</h5>
+            <p class="modal-confirmation__text">
+                Are you sure, you want to remove <a href="#" class="modal__user-url">Mace Windu</a> from the your member list?
+            </p>
+            <section class="modal__footer modal__footer--small modal__footer--align-right">
+                <button class="modal__btn modal__btn--cancel">cancel</button>
+                <button class="modal__btn modal__btn--save">delete</button>
+            </section>
+        </article>
+    <article class="modal modal-create-stream">
+        <h5 class="modal__title">Create Stream</h5>
+        <div class="modal__input-field">
+            <label for="create-stream-input" class="modal__label">Stream Name</label>
+            <input type="text" id="create-stream-input" class="modal__input modal__input--no-padd">
+        </div>
+        <section class="modal__footer modal__footer--small modal__footer--align-right">
+            <button class="modal__btn modal__btn--cancel">cancel</button>
+            <button class="modal__btn modal__btn--save">create</button>
+        </section>
+    </article>
+</article>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+.user-chat-col {
+  height: 94px;
+  width: 100%;
+  @include flex-align-center;
+  padding: 0 25px;
+  @include box;
+  cursor: pointer;
+  @include  transition;
+  @include flex-between;
+  &:hover {
+    background-color: lighten($main-color, 43%);
+  }
+  &--active {
+    background-color: lighten($main-color,35%) !important;
+  }
+  &__photo {
+    border-radius: 50%;
+    display: block;
+    width: 43px;
+    height: 43px;
+    background-color: #dde2ed;
+    background-image: url("../images/clear-user-logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-right: 15px;
+  }
+  &__img {
+    border-radius: 50%;
+    height: 100%;
+  }
+  &__outer {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__description {
+    @include flex-column;
+  }
+  &__title {
+    color: #2a324f;
+    @include HelveticaM;
+    @include lg-letter-space;
+    font-weight: 500;
+    font-size: 15px;
+    @include no-marg;
+    margin-bottom: 10px;
+    width: 171px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 1000px) {
+      width: 125px;
+    }
+    @media #{$tablet} {
+      width: 145px;
+    }
+  }
+  &__message--preview {
+    color: #a5aab4;
+    @include HelveticaM;
+    font-weight: 500;
+    font-size: 12px;
+    @include sm-letter-space;
+    @include no-marg;
+    width: 171px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 1000px) {
+      width: 125px;
+    }
+    @media #{$tablet} {
+      width: 145px;
+    }
+  }
+
+  &__date-of-message {
+    height: 43px;
+    @include  flex(column, space-between, flex-end);
+  }
+  &__date {
+    color: #afb4bd;
+    @include HelveticaM;
+    font-weight: 500;
+    @include lg-letter-space;
+    font-size: 12px;
+    @include no-marg;
+  }
+  &__counter {
+    display: flex;
+  }
+  &__message-counter {
+    @include no-marg;
+    color: #c1c7d3;
+    @include HelveticaB;
+    font-weight: 600;
+    font-size: 12px;
+    @include lg-letter-space;
+    &--active {
+      @include no-marg;
+      @include HelveticaB;
+      font-weight: 600;
+      font-size: 12px;
+      @include lg-letter-space;
+      color: $main-color;
+    }
+  }
+  &__ico {
+    color: #dbe0e9;
+    margin-left: 6px;
+    font-size: 18px;
+    position: relative;
+    top: -1.6px;
+    &--active {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: $main-color;
+      display: block;
+      border-radius: 50%;
+      right: 1px;
+      bottom: 5px;
+    }
+  }
+
+
+}

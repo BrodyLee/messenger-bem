@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+$big-ph:"(max-width:568px)";
+$tablet: "(max-width: 768px)";
+$desktop: "(min-width: 1024px)";
+$main-color: #11a0f8;
+
+@import "../fonts/fonts.css";
+@import "mixins/mixins";
+@import "modal-messenger";
+@import "messenger-navbar";
+@import "messenger-navbar-header";
+@import "navbar-search";
+@import "navbar-members-list";
+@import "navbar-user-list";
+@import "user-chat-col";
+@import "messenger-chat";
+@import "messenger-header";
+@import "chat-messages";
+@import "chat-user";
+@import "messenger-user-info-on-hover";
+@import "chat-user-yourself";
+@import "messenger-textarea";
+@import "messenger-day-separator";
+
+
+//modals
+
+@import "modal-inside-messenger";
+@import "modal-stream-messenger";
+@import "modal-members-info";
+@import "modal-confirmation";
+@import "modal-create-stream";
+@import "modal-members";
+@import "messenger-pop-ups";
+
+
+
+#messenger-modal, .modal-edit-stream, .modal-streams-info, .modal-add-member, .modal-delete-member, .modal-new-member, .modal-confirmation, .modal-create-stream, .inside-shadow,.modal-members{
+  @include hide;
+}
+
+

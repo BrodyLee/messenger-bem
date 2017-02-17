@@ -1,0 +1,99 @@
+@mixin left {
+  float: left;
+}
+
+@mixin right {
+  float: right;
+}
+
+@mixin no-marg {
+  margin: 0;
+}
+
+@mixin  flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@mixin hide {
+  display: none;
+}
+
+@mixin block {
+  display: block;
+}
+
+@mixin opacity($value) {
+  opacity: $value;
+}
+
+@mixin flex($direction, $justify , $align ) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin input-border {
+  border: 0;
+  border-bottom: 1px solid #f1f3f7;
+}
+
+@mixin box {
+  box-sizing: border-box;
+}
+
+@mixin transition {
+  transition: 0.3s;
+}
+
+@mixin HelveticaR {
+  font-family: HelveticaNeueRegular;
+  font-weight: 400;
+}
+
+@mixin HelveticaM {
+  font-family: HelveticaNeue-Md;
+  font-weight: 500;
+}
+
+@mixin HelveticaB {
+  font-family: HelveticaNeue-Bd;
+  font-weight: 700;
+}
+
+
+@mixin sm-letter-space {
+  letter-spacing: 0.038em;
+}
+
+@mixin md-letter-space {
+  letter-spacing: 0.044em;
+}
+
+@mixin lg-letter-space {
+  letter-spacing: 0.055em;
+}

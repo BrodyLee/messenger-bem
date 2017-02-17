@@ -1,0 +1,53 @@
+.modal-messenger {
+  position: absolute;
+  background: #f1f3f7;
+  border-radius: 3px;
+  width: 85%;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  z-index: 3;
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
+}
+
+#shadow {
+  opacity: 0.6;
+  background-color: #3e3e3e;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+#inside-shadow {
+  opacity: 0.6;
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  height: 100%;
+  z-index: 3;
+  background-color: darken(#3e3e3e, 10%);
+}
+
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 78px;
+  width: 1px;
+  background-color: $main-color;
+}

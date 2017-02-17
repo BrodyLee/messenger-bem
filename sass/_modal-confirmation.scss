@@ -1,0 +1,18 @@
+.modal-confirmation {
+  padding: 25px 30px;
+  max-width: 344px;
+  height: 200px;
+  @include box;
+  &__text {
+  @include HelveticaR;
+
+  font-size: 14px;
+  color: #a6b0b6;
+  @include lg-letter-space;
+  line-height: 22px;
+  margin: 25px 0 30px 0;
+    @media (max-width: 350px) {
+      margin-bottom: 10px
+    }
+  }
+}

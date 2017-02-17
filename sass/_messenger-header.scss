@@ -1,0 +1,72 @@
+.messenger-header {
+  height: 57px;
+  padding: 0 20px 0 33px;
+  width: 100%;
+  border-bottom: 1px solid #dfe5f0;
+  @include box;
+  @include flex-between;
+  align-items: center;
+  @media (max-width: 1000px) {
+    padding: 0 20px 0 15px;
+  }
+  @media #{$tablet} {
+    padding: 0 20px 0 25px;
+  }
+  @media #{$big-ph} {
+    padding: 0 15px;
+  }
+  &__chat-title {
+    @include flex-between;
+    align-items: center;
+    &--empty {
+      color: red;
+    }
+  }
+  &__icon-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__caption-chat {
+    @include no-marg;
+    display: block;
+    max-width: 275px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    @include HelveticaM;
+    color: $main-color;
+    text-decoration: none;
+    @include lg-letter-space;
+    margin-right: 7px;
+    @media #{$big-ph} {
+      max-width: 120px;
+    }
+  }
+  
+  &__counter-members {
+    @include no-marg;
+    white-space: nowrap;
+    @include HelveticaM;
+    color: #8a92ac;
+    font-weight: 500;
+    margin-top: 2px;
+    @include lg-letter-space;
+  }
+  &__attach-file-ico {
+    color: #bac3d3;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &__settings-ico {
+    @extend .messenger-header__attach-file-ico;
+    margin-right: 0;
+  }
+}

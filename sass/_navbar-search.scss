@@ -1,0 +1,38 @@
+.navbar-search {
+  position: relative;
+  &__input {
+    height: 52px;
+    padding-left: 60px;
+    width: 100%;
+    @include transition;
+    @include box;
+    @include input-border;
+    letter-spacing: 1px;
+    color: #c1c7d3;
+    font-size: 14px;
+    @include HelveticaR;
+    font-weight:400;
+    &:placeholder {
+      letter-spacing: 1.5px;
+      color: #c1c7d3;
+      font-size: 14px;
+      font-weight:400;
+      @include HelveticaR;
+    }
+    &:focus {
+      outline:0;
+      border-color: $main-color;
+    }
+    &:focus ~ .navbar-search__ico {
+      color: $main-color;
+    }
+
+  }
+  &__ico {
+    color: #c1c7d3;
+    position: absolute;
+    font-size: 20px;
+    left: 32px;
+    top: 17px;
+  }
+}

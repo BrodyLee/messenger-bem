@@ -1,0 +1,48 @@
+.navbar-user-list {
+  height: calc(100% - 205px);
+  overflow: auto;
+  &__outer {
+    display: flex;
+  }
+  &__title {
+    @include flex-between;
+    margin: 10px 0;
+    padding: 0 25px;
+    @include box;
+    align-items: center;
+  }
+
+  &__caption {
+    color: $main-color;
+    @include HelveticaB;
+    @include no-marg;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include lg-letter-space;
+  }
+  &__counter {
+    @include flex-between;
+  }
+  &__message-counter {
+    color: $main-color;
+    @include no-marg;
+    @include HelveticaB;
+    font-size: 12px;
+  }
+  &__ico {
+    color: #dbe0e9;
+    margin-left: 6px;
+    font-size: 18px;
+    position: relative;
+    top: -1.6px;
+  }
+  &__new-stream {
+    @extend .navbar-user-list__ico;
+    cursor: pointer;
+    margin-left: 12px;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+

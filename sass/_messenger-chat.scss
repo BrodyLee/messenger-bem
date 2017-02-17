@@ -1,0 +1,28 @@
+.messenger-chat {
+  padding-left: 336px;
+  width: 100%;
+  @include box;
+  position: relative;
+  height: 100%;
+  @media (max-width: 1000px) {
+    padding-left: 280px;
+  }
+  @media #{$tablet} {
+    padding-left: 0;
+  }
+  &--empty {
+    background-image: url("../images/bg-empty-mess.png");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+&__title--empty {
+  @include HelveticaM;
+  @include opacity(0.3);
+  color: #2a324f;
+  @include  no-marg;
+  font-size: 24px;
+}
+}

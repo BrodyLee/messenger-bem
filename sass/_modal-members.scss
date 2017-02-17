@@ -1,0 +1,10 @@
+.modal-members {
+  &__caption-group {
+    margin: 10px 0 15px 0;
+    @include HelveticaM;
+    @include lg-letter-space;
+    padding-left: 25px;
+    color: #bac3d3;
+    font-size: 12px;
+  }
+}
